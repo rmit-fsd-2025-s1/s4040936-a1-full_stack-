@@ -1,4 +1,5 @@
-
+import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -15,26 +16,21 @@ export default function Home() {
   return (
     <div>
       <main>
-    <div className="Header">
-      <ul className="HBAR">
-        <li className="MainTitle">
-          <h1>TT</h1>
-        </li>
+      <Navigation />
+      <div> 
+      <h1> WELCOME TO TEAM TEACH</h1>
+      </div>
+      <div>
+      <p>
+      A website where tutorers and lecturers alike can find suitable teaching help for their classroom needs. blah blah blah blah blah blah blah blah.   
+      </p>
+      </div>
+      <div>
+      
+      </div>
+      
+      <Footer />
 
-        <li className="Login">
-         <button
-         onClick={console.log}>
-
-          Login
-
-         </button>
-
-        </li>
-      </ul>
-    </div>
-
-
-    
     </main>
     </div>
   );

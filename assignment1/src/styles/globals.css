@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #359dda;
   --foreground: #171717;
 }
 
@@ -27,5 +27,39 @@ body {
 
 .MainTitle{
   color: red;
+}
+
+
+main{
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+color: #ffffff;
+
+}
+
+.Footer{
+  background-color: blue;
+  display: block;
+  margin-top: auto; 
+  text-align: center;
+  color: #ededed;
+}
+
+nav{
+text-align: center;
+padding-top: 5%;
+background-color:#ffffff;
+color: rgb(0, 0, 0);
+position: fixed;
+top:0;
+width: 100%;
+border: #b0adad;
+border-style: solid;
+}
+
+.Link{
+  display: inline;
+
 }
 
