@@ -16,17 +16,13 @@ export default function Home() {
   return (
     <div>
       <main>
-      <Navigation />
-      <div> 
+      <div className="content"> 
       <h1> WELCOME TO TEAM TEACH</h1>
-      </div>
-      <div>
-      <p>
+      <p className="highlights">
       A website where tutorers and lecturers alike can find suitable teaching help for their classroom needs. blah blah blah blah blah blah blah blah.   
       </p>
-      </div>
-      <div>
-      
+
+      <a href="#" className="join-button">Join now</a>
       </div>
       
       <Footer />
