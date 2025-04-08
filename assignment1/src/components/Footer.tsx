@@ -4,7 +4,7 @@ export default function Footer(){
 return(
 <div className="Footer">
     <footer>
-    <p> This is the footer for the page</p>
+    <p> This is the footer for the pagen</p>
     </footer>
 
 
