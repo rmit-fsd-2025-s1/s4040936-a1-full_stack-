@@ -4,11 +4,14 @@ export default function Footer(){
 return(
 <div className="Footer">
     <footer>
-    <p> This is the footer for the pagen</p>
-    </footer>
 
-
+     <p>© 2025 TeachTeam | All rights reserved.</p>
+     </footer>
 </div>
+   
+
+
+
 
 
 

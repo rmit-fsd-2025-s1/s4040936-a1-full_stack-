@@ -19,11 +19,11 @@ export default function Home() {
       <Navigation />
       <div className="content"> 
       <h1> WELCOME TO TEAMTEACH</h1>
+      
       <p className="highlights">
-      A website where tutorers and lecturers alike can find suitable teaching help for their classroom needs. blah blah blah blah blah blah blah blah.   
-      </p>
-
-      <a href="#" className="join-button">Join now</a>
+            A website where tutor applicants and lecturers alike can find suitable teaching help for their classroom needs. Applicants can apply for tutor roles, and lecturers can select the most suitable candidates. 
+          </p>
+          <a href="/signin" className="join-button">Join now</a>
       </div>
       
       <Footer />
