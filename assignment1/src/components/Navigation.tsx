@@ -5,7 +5,7 @@ export default function Navigation() {
     <nav className="navbar">
       <div className="nav-container">
         <a href="#" className="logo">
-          TeamTeach
+          TeachTeam
         </a>
         <ul className="nav-links">
           <li>

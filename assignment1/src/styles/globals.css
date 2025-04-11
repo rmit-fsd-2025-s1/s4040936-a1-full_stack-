@@ -20,8 +20,9 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: white;
+  margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -125,3 +126,71 @@ p {
   text-decoration: none;
 }
 
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.hero-image {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.form input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form .join-button {
+  width: 100%;
+  text-align: center;
+}
+
+.form .link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form .link a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form .link a:hover {
+  text-decoration: underline;
+}
