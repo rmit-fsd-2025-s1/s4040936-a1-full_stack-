@@ -1,14 +1,13 @@
 export type User = {
-    id: string;
+    role: string;
     email: string;
     password: string;
   };
   
   export const DEFAULT_USERS: User[] = [
-    { id: "1", email: "meow", password: "password123" },
-    { id: "2", email: "loverboy", password: "password456" },
+    { role: "tutor", email: "meowmeow@rmit.com", password: "password123" },
+    { role: "lecturer", email: "loverboy@rmit.com", password: "password456" },
   ];
 
-  //1 = Tutor!! 
-  //2 = Lecturer!!
+ 
   

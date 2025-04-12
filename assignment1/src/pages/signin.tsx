@@ -1,24 +1,25 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { useAuth } from "@/Context/Login";
+import { LoginProvider, useAuth } from "@/Context/Login";
 
 export default function SignIn() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
   const { login } = useAuth();
-  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const success = login(email, password);
+    const success = login(email, password); 
     if (success) {
-      router.push("/");
+      setMessage("Login successful");
+      setTimeout(() => {
+        const storedUser = JSON.parse(localStorage.getItem("currentUser") || "null");
+        router.push(storedUser?.role === "tutor" ? "/tutor" : "/lecturer");
+      }, 1000);
     } else {
-      setError("Invalid username or password");
+      setMessage("Invalid email or password");
     }
   };
 
@@ -38,13 +39,6 @@ export default function SignIn() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
           required
         />
         <button type="submit" className="join-button">Sign in</button>
