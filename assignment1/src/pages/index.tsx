@@ -13,10 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const images = [
- ""
-];
-
+const images = [""];
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -35,16 +32,32 @@ export default function Home() {
         <div className="content">
           <h1>WELCOME TO TEACHTEAM</h1>
           <p className="highlights">
-            A website where tutor applicants and lecturers alike can find suitable teaching help for their classroom needs. Applicants can apply for tutor roles, and lecturers can select the most suitable candidates. 
+            A website where tutor applicants and lecturers alike can find
+            suitable teaching help for their classroom needs. Applicants can
+            apply for tutor roles, and lecturers can select the most suitable
+            candidates.
           </p>
 
-          <p> 
-          <a href="#" className="join-button">Join now</a>
+          <p>
+            <a href="#" className="join-button">
+              Join now
+            </a>
           </p>
         </div>
-        <div className="content" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "2rem" }}>
-          <img src={images[currentImage]} alt="TeachTeam Banner" style={{ maxWidth: "1500px", borderRadius: "12px" }} />
-          
+        <div
+          className="content"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "2rem",
+          }}
+        >
+          <img
+            src={images[currentImage]}
+            alt="TeachTeam Banner"
+            style={{ maxWidth: "1500px", borderRadius: "12px" }}
+          />
         </div>
         <Footer />
       </main>

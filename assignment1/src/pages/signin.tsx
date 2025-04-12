@@ -11,11 +11,15 @@ export default function SignIn() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const success = login(email, password); 
+    setMessage("");
+
+    const success = login(email, password);
     if (success) {
       setMessage("Login successful");
       setTimeout(() => {
-        const storedUser = JSON.parse(localStorage.getItem("currentUser") || "null");
+        const storedUser = JSON.parse(
+          localStorage.getItem("currentUser") || "null"
+        );
         router.push(storedUser?.role === "tutor" ? "/tutor" : "/lecturer");
       }, 1000);
     } else {
@@ -41,7 +45,9 @@ export default function SignIn() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit" className="join-button">Sign in</button>
+        <button type="submit" className="join-button">
+          Sign in
+        </button>
         {message && <p>{message}</p>}
       </form>
     </div>
