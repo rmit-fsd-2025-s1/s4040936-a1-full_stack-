@@ -39,7 +39,7 @@ export default function Home() {
           </p>
 
           <p> 
-          <a href="/signin" className="join-button">Join now</a>
+          <a href="#" className="join-button">Join now</a>
           </p>
         </div>
         <div className="content" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "2rem" }}>

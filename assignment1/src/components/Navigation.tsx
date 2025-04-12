@@ -24,7 +24,7 @@ export default function Navigation() {
             <a href="#">About us</a>
           </li>
           <li>
-            <a href="#">Login</a>
+            <a href="/signin">Login</a>
           </li>
           <li>
             <a href="#">Join</a>
