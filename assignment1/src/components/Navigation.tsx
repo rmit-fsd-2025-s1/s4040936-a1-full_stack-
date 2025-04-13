@@ -18,8 +18,10 @@ export default function Navigation() {
           TeachTeam
         </a>
         <ul className="nav-links">
-          <li>
-            <a href="/index">Home</a>
+        <li>
+           
+              <a href="/">Home</a>
+           
           </li>
           <li>
             <a href="#">How this works</a>
