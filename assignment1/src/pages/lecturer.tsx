@@ -47,6 +47,7 @@ export default function LecturerPage() {
     );
   });
 
+
   const sorted = [...filtered].sort((a, b) => {
     if (!sortField) return 0;
     return a[sortField].localeCompare(b[sortField]);
@@ -57,7 +58,6 @@ export default function LecturerPage() {
   };
 
   const selectedApplicants = applicants.filter((a) => a.selected);
-
   const mostChosen = selectedApplicants.length ? selectedApplicants[0] : null;
   const leastChosen = selectedApplicants.length ? selectedApplicants[selectedApplicants.length - 1] : null;
   const notSelected = applicants.filter((a) => !a.selected);
@@ -84,10 +84,15 @@ export default function LecturerPage() {
           <Thead>
             <Tr>
               <Th>Course</Th>
+
               <Th>Role</Th>
               <Th>Availability</Th>
+
               <Th>Skills</Th>
               <Th>Qualifications</Th>
+
+
+
               <Th>Select</Th>
               <Th>Rank</Th>
               <Th>Comments</Th>
@@ -100,6 +105,8 @@ export default function LecturerPage() {
                 <Td>{app.role}</Td>
                 <Td>{app.availability}</Td>
                 <Td>{app.skills}</Td>
+
+                
                 <Td>{app.credentials}</Td>
                 <Td>
                   <input

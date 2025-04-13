@@ -93,7 +93,7 @@ export default function TutorPage() {
 
           <FormControl mb={4} isRequired>
             <FormLabel>Academic Qualifications</FormLabel>
-            <Input name="credentials" onChange={handleChange} placeholder="e.g., Bachelor of Computer Science" />
+            <Input name="credentials" onChange={handleChange} placeholder="e.g., Bachelor of I.T" />
           </FormControl>
 
           <Button colorScheme="blue" type="submit">Submit Application</Button>

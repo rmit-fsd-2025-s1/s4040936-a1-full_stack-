@@ -12,7 +12,7 @@ export default function Navigation() {
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">How is works</a>
+            <a href="#">How this works</a>
           </li>
           <li>
             <a href="#">Browse tutors</a>
