@@ -6,23 +6,26 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    const existing = JSON.parse(localStorage.getItem("users") || "[]");
-    if (existing.length === 0) {
-      const dummyUsers = [
-        {
-          email: "abc@gmail.com",
-          password: "theAus123@",
-          role: "tutor",
-        },
-        {
-          email: "bcd@gmail.com",
-          password: "theNSW123",
-          role: "lecturer",
-        },
-      ];
-      localStorage.setItem("users", JSON.stringify(dummyUsers));
+    if (typeof window !== "undefined") {
+      const existing = JSON.parse(localStorage.getItem("users") || "[]");
+      if (existing.length === 0) {
+        const dummyUsers = [
+          {
+            email: "abc@gmail.com",
+            password: "theAus123",
+            role: "tutor"
+          },
+          {
+            email: "bcd@gmail.com",
+            password: "theNSW123",
+            role: "lecturer"
+          }
+        ];
+        localStorage.setItem("users", JSON.stringify(dummyUsers));
+      }
     }
   }, []);
+  
 
   return (
     <ChakraProvider>

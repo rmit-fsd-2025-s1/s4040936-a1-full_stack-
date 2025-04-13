@@ -15,21 +15,25 @@ export default function SignIn() {
     e.preventDefault();
     setMessage("");
 
-    const users = JSON.parse(localStorage.getItem("users") || "[]");
-    const foundUser = users.find(
-      (u: any) => u.email === email && u.password === password
-    );
+    const success = login(email, password);
 
-    if (foundUser) {
-      localStorage.setItem("currentUser", JSON.stringify(foundUser));
-      login(email, password);
-      setMessage("Login successful");
-      setTimeout(() => {
-        router.push(foundUser.role === "tutor" ? "/tutor" : "/lecturer");
-      }, 1000);
+if (success) {
+  const storedUser = JSON.parse(localStorage.getItem("currentUser") || "null");
+  setMessage("Login successful");
+
+  setTimeout(() => {
+    if (storedUser?.role === "tutor") {
+      router.push("/tutor");
+    } else if (storedUser?.role === "lecturer") {
+      router.push("/lecturer");
     } else {
-      setMessage("Invalid email or password");
+      router.push("/");
     }
+  }, 1000);
+} else {
+  setMessage("Invalid email or password");
+}
+
   };
 
   return (
