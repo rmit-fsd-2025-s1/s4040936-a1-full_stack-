@@ -1,5 +1,8 @@
 // jest.config.js
+
+import "@testing-library/jest-dom";
 const nextJest = require("next/jest");
+
 
 const createJestConfig = nextJest({
   dir: "./",
