@@ -17,23 +17,22 @@ export default function SignIn() {
 
     const success = login(email, password);
 
-if (success) {
-  const storedUser = JSON.parse(localStorage.getItem("currentUser") || "null");
-  setMessage("Login successful");
+    if (success) {
+      const storedUser = JSON.parse(localStorage.getItem("currentUser") || "null");
+      setMessage("Login successful");
 
-  setTimeout(() => {
-    if (storedUser?.role === "tutor") {
-      router.push("/tutor");
-    } else if (storedUser?.role === "lecturer") {
-      router.push("/lecturer");
+      setTimeout(() => {
+        if (storedUser?.role === "tutor") {
+          router.push("/tutor");
+        } else if (storedUser?.role === "lecturer") {
+          router.push("/lecturer");
+        } else {
+          router.push("/");
+        }
+      }, 1000);
     } else {
-      router.push("/");
+      setMessage("Invalid email or password");
     }
-  }, 1000);
-} else {
-  setMessage("Invalid email or password");
-}
-
   };
 
   return (
